@@ -31,9 +31,6 @@ module.exports = {
       {
         trailingComma: 'es5',
         singleQuote: true,
-        tabWidth: 2,
-        semi: true,
-        jsxSingleQuote: true,
       },
     ],
     'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }],
