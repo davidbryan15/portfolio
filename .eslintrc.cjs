@@ -10,6 +10,7 @@ module.exports = {
     'airbnb/hooks',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
@@ -18,11 +19,24 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json'],
   },
-  plugins: ['react', '@typescript-eslint'],
-  ignorePatterns: ['tailwind.config.cjs', 'postcss.config.cjs'],
+  plugins: ['react', '@typescript-eslint', 'prettier'],
+  ignorePatterns: [
+    'tailwind.config.cjs',
+    'postcss.config.cjs',
+    'vite.config.ts',
+  ],
   rules: {
+    'prettier/prettier': [
+      2,
+      {
+        trailingComma: 'es5',
+        singleQuote: true,
+        tabWidth: 2,
+        semi: true,
+        jsxSingleQuote: true,
+      },
+    ],
     'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }],
-    'jsx-quotes': ['error', 'prefer-single'],
     'react/react-in-jsx-scope': 0,
   },
 };
