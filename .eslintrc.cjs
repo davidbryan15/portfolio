@@ -20,11 +20,7 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
-  ignorePatterns: [
-    'tailwind.config.cjs',
-    'postcss.config.cjs',
-    'vite.config.ts',
-  ],
+  ignorePatterns: [],
   rules: {
     'prettier/prettier': [
       2,
