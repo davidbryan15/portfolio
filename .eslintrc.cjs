@@ -31,5 +31,6 @@ module.exports = {
     ],
     'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }],
     'react/react-in-jsx-scope': 0,
+    'eslint linebreak-style': [error, 'unix'],
   },
 };
